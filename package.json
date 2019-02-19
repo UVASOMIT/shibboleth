@@ -1,0 +1,33 @@
+{
+  "name": "shibboleth",
+  "version": "0.1.0",
+  "description": "JavaScript package for accessing authentication items from Shibboleth in Express and Restify web applications.",
+  "main": "./lib/index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szul/shibboleth.git"
+  },
+  "keywords": [
+    "shibboleth",
+    "express",
+    "expressjs",
+    "restify",
+    "iisnode"
+  ],
+  "author": "Michael Szul <michael@szul.us>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/szul/shibboleth/issues"
+  },
+  "homepage": "https://github.com/szul/shibboleth#readme",
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "@types/restify": "^7.2.8",
+    "mocha": "^6.0.0",
+    "typescript": "^3.3.3"
+  }
+}
