@@ -33,7 +33,7 @@ export class Shibboleth {
         return false;
     }
     public redirect(req: restify.Request | express.Request, res: restify.Response | express.Response, next: any): void {
-        res.redirect(301, `${process.env.SHIBBOLETH}${req.url}`, next)
+        res.redirect(301, `${this._shibURL}${req.url}`, next)
     }
 }
 
