@@ -17,10 +17,10 @@ export function getAuthUser(req: restify.Request | express.Request, headers?: st
     try {
         const ComputingID: string | string[] = req.headers["http_uid"]
          || req.headers["http_pubcookie_user"]
-         || req.headers["login_user"]
+         || req.headers["logon_user"]
          || req.headers["x-iisnode-http_uid"]
          || req.headers["x-iisnode-http_pubcookie_user"]
-         || req.headers["x-iisnode-login_user"];
+         || req.headers["x-iisnode-logon_user"];
         return (ComputingID instanceof Array) ? ComputingID[0] : ComputingID;
     }
     catch(e) {

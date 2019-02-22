@@ -22,7 +22,7 @@ To use this as Restify middleware:
 
 The middleware will look to see if the `http_shibsessionid` header or the `x-iisnode-http_shibsessionid` header is present. If so, the middleware passes, and moves to the next middleware. If not, the middleware will look for an environment variable called `SHIBBOLETHURL`. This URL should be the login/authentication URL without the query string. It will append `?target=` to the end of it, and then redirect the user to the Shibboleth authentication URL with the target set to the currently requested page.
 
-When it returns the headers should be present, and the middleware will pass. To get the authenticated user, check your headers for the apprioriate item, such as `http_uid` or `login_user`. This will depend on your setup.
+When it returns the headers should be present, and the middleware will pass. To get the authenticated user, check your headers for the apprioriate item, such as `http_uid` or `logon_user`. This will depend on your setup.
 
 You can also get the user via the user helper:
 
@@ -36,7 +36,7 @@ This accepts a Restify or Express request object, and by default will return one
 
 * `http_uid`
 * `http_pubcookie_user`
-* `login_user`
+* `logon_user`
 * `x-iisnode-http_uid`
 * `x-iisnode-http_pubcookie_user`
 * `x-iisnode-login_user`
