@@ -1,6 +1,7 @@
 # Shibboleth Node.JS Package
 
 JavaScript package for accessing authentication items from Shibboleth.
+<<<<<<< HEAD
 
 ## Installation
 
@@ -64,3 +65,5 @@ In the above `headers` is optional, and is a string array of Shibboleth session 
 * `shib.redirect(req, next)`
 
 In the above, `next` is for Restify only, and is what is passed through via the `shibboleth()` middleware.
+=======
+>>>>>>> 160e1556d2c31fcf900d6ab639061958d4c61911
