@@ -1,11 +1,8 @@
-import * as restify from "restify";
-import * as express from "express";
-
 /**
  * @module shibboleth
  */
 
-export function getAuthUser(req: restify.Request | express.Request, headers?: string[]): string {
+export function getAuthUser(req: any, headers?: string[]): string {
     if(headers != null && headers.length > 0) {
         for(let i = 0; i < headers.length; i++) {
             if(req.headers[headers[i]] != null && req.headers[headers[i]] != "") {
