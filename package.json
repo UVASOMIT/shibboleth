@@ -1,6 +1,6 @@
 {
   "name": "shibboleth",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "JavaScript package for accessing authentication items from Shibboleth in Express and Restify web applications.",
   "main": "./lib/index.js",
   "scripts": {
