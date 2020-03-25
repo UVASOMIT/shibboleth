@@ -2,6 +2,6 @@
  * @module shibboleth
  */
 
- export * from "./shibboleth";
- export * from "./auth";
+export * from './shibboleth';
+export * from './auth';
  

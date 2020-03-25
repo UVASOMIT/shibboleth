@@ -1,11 +1,32 @@
 {
   "name": "shibboleth",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "JavaScript package for accessing authentication items from Shibboleth in Express and Restify web applications.",
   "main": "./lib/index.js",
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "all": true,
+    "check-coverage": true,
+    "lines": 0,
+    "statements": 0,
+    "functions": 0,
+    "branches": 0,
+    "exclude": [
+      "**/*.d.ts",
+      "**/*.test.js"
+    ],
+    "reporter": [
+      "text",
+      "cobertura",
+      "html"
+    ],
+    "report-dir": "./.nyc_output/coverage"
+  },
   "scripts": {
-    "build": "tsc -p .",
-    "test": "mocha"
+    "build": "tsc",
+    "test": "tsc && myc mocha",
+    "eslint": "eslint ./src/*.ts ./src/**/*.ts",
+    "eslint-fix": "eslint ./src/*.ts ./src/**/*.ts --fix"
   },
   "repository": {
     "type": "git",
@@ -25,10 +46,18 @@
   },
   "homepage": "https://github.com/szul/shibboleth#readme",
   "devDependencies": {
-    "mocha": "^6.1.4",
-    "typescript": "^3.5.2"
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@types/node": "^12.12.31",
+    "@typescript-eslint/eslint-plugin": "^2.25.0",
+    "@typescript-eslint/parser": "^2.25.0",
+    "eslint": "^6.8.0",
+    "mocha": "^6.2.2",
+    "mocha-junit-reporter": "^1.23.3",
+    "nyc": "^15.0.0",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3"
   },
-  "dependencies": {
-    "@types/node": "^12.0.10"
+  "publishConfig": {
+    "access": "public"
   }
 }

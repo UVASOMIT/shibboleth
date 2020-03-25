@@ -6,8 +6,8 @@ export class Shibboleth {
     private _shibURL: string;
     constructor(shibURL: string) {
         this._shibURL = shibURL;
-        if(!this._shibURL.endsWith("?target=")) {
-            this._shibURL = `${this._shibURL}?target=`;
+        if(!this._shibURL.endsWith('?target=')) {
+            this._shibURL = `${ this._shibURL }?target=`;
         }
     }
     public hasShibSessionInfo(req: any, headers?: string[]): boolean {
@@ -18,7 +18,7 @@ export class Shibboleth {
                 }
             }
         }
-        if(req.headers["http_shibsessionid"] != null || req.headers["x-iisnode-http_shibsessionid"] != null) {
+        if(req.headers['http_shibsessionid'] != null || req.headers['x-iisnode-http_shibsessionid'] != null) {
             return true;
         }
         return false;
@@ -30,7 +30,7 @@ export class Shibboleth {
         return false;
     }
     public redirect(req: any, res: any, next: any): void {
-        res.redirect(301, `${this._shibURL}${req.url}`, next)
+        res.redirect(301, `${ this._shibURL }${ req.url }`, next);
     }
 }
 
