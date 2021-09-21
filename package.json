@@ -1,6 +1,6 @@
 {
   "name": "@uvasomit/shibboleth",
-  "version": "0.2.2",
+  "version": "1.0.0",
   "description": "JavaScript package for accessing authentication items from Shibboleth in Express and Restify web applications.",
   "main": "./dist/index.js",
   "nyc": {

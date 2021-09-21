@@ -29,15 +29,15 @@ export class Shibboleth {
         }
         return false;
     }
-    public redirect(req: any, res: any, next: any): void {
-        res.redirect(301, `${ this._shibURL }${ req.url }`, next);
+    public redirect(req: any, res: any): void {
+        res.redirect(`${ this._shibURL }${ req.url }`, 301);
     }
 }
 
 export function shibboleth(req: any, res: any, next: any): void {
     const shib = new Shibboleth(process.env.SHIBBOLETHURL);
     if(shib.shouldRedirect(req)) {
-        shib.redirect(req, res, next);
+        shib.redirect(req, res);
     }
     next();
 }

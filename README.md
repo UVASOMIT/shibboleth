@@ -6,7 +6,7 @@ JavaScript package for accessing authentication items from Shibboleth.
 
 To install the package:
 
-    npm install shibboleth --save
+    npm install @uvasomit/shibboleth --save
 
 ## Usage (TypeScript)
 
@@ -14,11 +14,12 @@ To install the package:
 
 To use this as Restify middleware:
 
-    const { shibboleth } = require("@uvasomit/shibboleth");
+    const { shibboleth } = require('@uvasomit/shibboleth');
 
-    const server: restify.Server = restify.createServer();
+    const app = express();
+    const server = new http.Server(app);
 
-    server.use(shibboleth);
+    app.use(shibboleth);
 
 The middleware will look to see if the `http_shibsessionid` header or the `x-iisnode-http_shibsessionid` header is present. If so, the middleware passes, and moves to the next middleware. If not, the middleware will look for an environment variable called `SHIBBOLETHURL`. This URL should be the login/authentication URL without the query string. It will append `?target=` to the end of it, and then redirect the user to the Shibboleth authentication URL with the target set to the currently requested page.
 
@@ -26,7 +27,7 @@ When it returns the headers should be present, and the middleware will pass. To 
 
 You can also get the user via the user helper:
 
-    const { getUserAuth, shibboleth } = require("@uvasomit/shibboleth");
+    const { getUserAuth, shibboleth } = require('@uvasomit/shibboleth');
 
 You can then call:
 
@@ -50,7 +51,7 @@ You can also check explicitly for a different set of headers via:
 
 If you don't want to use the middleware, you can import the `Shibboleth` class:
 
-    const { Shibboleth } = require("@uvasomit/shibboleth");
+    const { Shibboleth } = require('@uvasomit/shibboleth');
 
     const shib = new Shibboleth(process.env.SHIBBOLETHURL);
 
