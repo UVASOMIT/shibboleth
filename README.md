@@ -14,7 +14,7 @@ To install the package:
 
 To use this as Restify middleware:
 
-    const { shibboleth } = require("shibboleth");
+    const { shibboleth } = require("@uvasomit/shibboleth");
 
     const server: restify.Server = restify.createServer();
 
@@ -26,7 +26,7 @@ When it returns the headers should be present, and the middleware will pass. To 
 
 You can also get the user via the user helper:
 
-    const { getUserAuth, shibboleth } = require("shibboleth");
+    const { getUserAuth, shibboleth } = require("@uvasomit/shibboleth");
 
 You can then call:
 
@@ -50,7 +50,7 @@ You can also check explicitly for a different set of headers via:
 
 If you don't want to use the middleware, you can import the `Shibboleth` class:
 
-    const { Shibboleth } = require("shibboleth");
+    const { Shibboleth } = require("@uvasomit/shibboleth");
 
     const shib = new Shibboleth(process.env.SHIBBOLETHURL);
 

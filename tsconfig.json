@@ -1,16 +1,17 @@
 {
     "compileOnSave": true,
     "compilerOptions": {
+        "target":"es6",
         "module": "commonjs",
-        "target": "ESNext",
-        "sourceMap": true,
         "declaration": true,
-        "removeComments": true,
-        "outDir": "./lib",
+        "sourceMap": true,
+        "outDir": "./dist",
         "rootDir": "./src",
-        "types": [
-            "node"
-        ]
+        "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
+        "resolveJsonModule": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
     "include": [
         "./src/**/*"

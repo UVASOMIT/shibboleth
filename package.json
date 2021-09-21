@@ -1,10 +1,9 @@
 {
-  "name": "shibboleth",
-  "version": "0.1.6",
+  "name": "@uvasomit/shibboleth",
+  "version": "0.2.0",
   "description": "JavaScript package for accessing authentication items from Shibboleth in Express and Restify web applications.",
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
   "nyc": {
-    "extends": "@istanbuljs/nyc-config-typescript",
     "all": true,
     "check-coverage": true,
     "lines": 0,
@@ -30,7 +29,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/szul/shibboleth.git"
+    "url": "git+https://github.com/UVASOMIT/shibboleth.git"
   },
   "keywords": [
     "shibboleth",
@@ -39,12 +38,12 @@
     "restify",
     "iisnode"
   ],
-  "author": "Michael Szul <michael@szul.us>",
+  "author": "Michael Szul <ms5ke@virginia.edu>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/szul/shibboleth/issues"
+    "url": "https://github.com/UVASOMIT/shibboleth/issues"
   },
-  "homepage": "https://github.com/szul/shibboleth#readme",
+  "homepage": "https://github.com/UVASOMIT/shibboleth#readme",
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/node": "^12.12.31",
@@ -58,6 +57,7 @@
     "typescript": "^3.8.3"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   }
 }
