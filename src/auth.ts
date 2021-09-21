@@ -1,5 +1,5 @@
 /**
- * @module shibboleth
+ * @module uvasomit/shibboleth
  */
 
 export function getAuthUser(req: any, headers?: string[]): string {
