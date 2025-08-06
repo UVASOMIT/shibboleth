@@ -49,7 +49,7 @@
     "@types/node": "^12.12.31",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.25.0",
-    "eslint": "^6.8.0",
+    "eslint": "^9.32.0",
     "mocha": "^6.2.2",
     "mocha-junit-reporter": "^1.23.3",
     "nyc": "^15.0.0",
